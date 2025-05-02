@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginregis.RegisterActivity"
+    android:background="@color/biru">
+
+    <!-- Backgrounds -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradasi_putih"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/texmath2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/teksturmath"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/nama_app2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nama_aplikasi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/texmath2"
+        android:layout_marginTop="35dp"/>
+
+    <!-- Nama Lengkap -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/namalengkapRegis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bginput"
+        android:textColorHint="@color/birutua"
+        app:layout_constraintTop_toBottomOf="@id/nama_app2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="nama lengkap"
+            android:textColor="@color/birutua"
+            android:textColorHint="@color/birutua"
+            android:background="@drawable/bginput"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Nama Pengguna -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/namapenggunaRegis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bginput"
+        android:textColorHint="@color/birutua"
+        app:layout_constraintTop_toBottomOf="@id/namalengkapRegis"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="nama pengguna"
+            android:inputType="text"
+            android:textColor="@color/birutua"
+            android:textColorHint="@color/birutua"
+            android:background="@drawable/bginput"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Spinner Pilih Kelas -->
+    <Spinner
+        android:id="@+id/kelas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bginput"
+        android:layout_marginTop="25dp"
+        android:entries="@array/class_list"
+        android:theme="@style/SpinnerThemeOverlay"
+        app:layout_constraintTop_toBottomOf="@id/namapenggunaRegis"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Kata Sandi -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/katasandiRegislay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bginput"
+        android:textColorHint="@color/birutua"
+        app:endIconMode="password_toggle"
+        app:layout_constraintTop_toBottomOf="@id/kelas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/katasandiRegis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="kata sandi"
+            android:inputType="textPassword"
+            android:textColor="@color/birutua"
+            android:textColorHint="@color/birutua"
+            android:background="@drawable/bginput"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Spinner Pilih Role -->
+    <Spinner
+        android:id="@+id/spinnerRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bginput"
+        android:entries="@array/roles"
+        android:theme="@style/SpinnerThemeOverlay"
+        app:layout_constraintTop_toBottomOf="@id/katasandiRegislay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Input Kode Akses (wajib jika guru) -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputKodeRegis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bginput"
+        android:textColorHint="@color/birutua"
+        app:layout_constraintTop_toBottomOf="@id/spinnerRole"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/kodeRegis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="kode akses (khusus guru)"
+            android:inputType="text"
+            android:textColor="@color/birutua"
+            android:textColorHint="@color/birutua"
+            android:background="@drawable/bginput"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- Tombol Daftar -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/tombolRegis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/regis_selector"
+        android:text="DAFTAR"
+        android:textColor="@color/birutua"
+        app:layout_constraintTop_toBottomOf="@id/inputKodeRegis"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="biru">#3D94FE</color>
+    <color name="birutua">#195FBE</color>
+    <color name="birunavbar">#1F79F5</color>
+    <color name="selectedicon">#002E6D</color>
+    <color name="text">#575757</color>
+    <color name="birutopik">#A1C9FF</color>
+    <color name="kuningkuis">#FBCD17</color>
+</resources>

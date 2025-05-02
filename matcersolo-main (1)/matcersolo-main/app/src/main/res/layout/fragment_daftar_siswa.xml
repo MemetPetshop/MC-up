@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <!-- Judul -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daftar Siswa"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Search Bar -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cari nama Siswa"
+        android:textColor="@color/text"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black"
+
+        app:startIconDrawable="@drawable/ic_search">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchSiswa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Sort & Lihat Data -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="8dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:text="Diurutkan berdasarkan alfabet"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lihat data siswa"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Header Tabel -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Nomor"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="Nama Siswa"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- RecyclerView Daftar Siswa -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSiswa"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="8dp"
+        android:background="@color/birutopik"
+        android:clipToPadding="false" />
+
+    <!-- Page Indicator (Dots) -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:tabIndicatorColor="@color/birutua"
+        app:tabIndicatorHeight="6dp"
+        app:tabSelectedTextColor="@color/black"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabBackground="@drawable/dot_selector" />
+
+</LinearLayout>

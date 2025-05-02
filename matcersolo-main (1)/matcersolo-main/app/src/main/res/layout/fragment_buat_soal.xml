@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Judul -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buat Topik dan Soal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Label Soal Baru -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Soal Baru"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_label_biru"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="4dp"
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold" />
+
+        <!-- CardView Soal -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:backgroundTint="@color/birutopik"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvSoalKe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SOAL 1"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Gambar Soal -->
+                <ImageView
+                    android:id="@+id/imgSoal"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_image_placeholder"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih Gambar"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tambah gambar (maks 2MB, jpg) *opsional"
+                    android:textColor="@color/text"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_gravity="center_horizontal" />
+
+                <!-- Pertanyaan -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    app:hintTextColor="@color/black"
+                    android:hint="Pertanyaan"
+                    android:layout_marginBottom="12dp"
+                    app:boxBackgroundMode="outline">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPertanyaan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:minLines="2"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Judul Jawaban -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="*Pilih satu jawaban benar"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Radio Button Pilihan -->
+                <RadioGroup
+                    android:id="@+id/rgJawaban"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    android:layout_marginBottom="16dp">
+
+                    <RadioButton
+                        android:id="@+id/rbA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_button_selector"
+                        android:text="Jawaban A"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/rbB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jawaban B"
+                        android:textColor="@color/black"
+                        android:buttonTint="@color/radio_button_selector" />
+
+
+                    <RadioButton
+                        android:id="@+id/rbC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Jawaban C"
+                        android:buttonTint="@color/radio_button_selector"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/rbD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Jawaban D"
+                        android:buttonTint="@color/radio_button_selector"
+                        android:textColor="@color/black" />
+                </RadioGroup>
+
+                <!-- Inputan jawaban -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Isi jawaban A"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:boxBackgroundMode="outline"
+                    android:layout_marginBottom="8dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etA"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Isi jawaban B"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:boxBackgroundMode="outline"
+                    android:layout_marginBottom="8dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Isi jawaban C"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:boxBackgroundMode="outline"
+                    android:layout_marginBottom="8dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Isi jawaban D"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:boxBackgroundMode="outline"
+                    android:layout_marginBottom="8dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tombol Aksi -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnKembali"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Kembali"
+                android:backgroundTint="@color/text"
+                android:textColor="@android:color/black"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnSoalBerikut"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Soal Berikut"
+                android:backgroundTint="@color/birutopik"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

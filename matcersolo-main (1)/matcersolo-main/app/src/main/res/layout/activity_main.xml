@@ -1,0 +1,80 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginregis.MainActivity"
+    android:background="@color/white">
+
+    <!-- HEADER ATAS -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="413dp"
+        android:layout_height="115dp"
+        android:background="@drawable/bg_navigasi_atas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/logo_sekolah"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nama_sekolah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="SD KATOLIK 08 SANTO ANTONIUS"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/nama_aplikasi"
+            android:layout_width="256dp"
+            android:layout_height="78dp"
+            android:background="@drawable/nama_aplikasi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- NAVIGATION FRAGMENT -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/navbar"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:navGraph="@navigation/navigasi" />
+
+    <!-- BOTTOM NAVIGATION -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/birunavbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:itemTextColor="@color/icon_color_selector"
+        app:itemIconTint="@color/icon_color_selector"
+        app:itemIconSize="35dp"
+        app:itemRippleColor="@android:color/transparent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

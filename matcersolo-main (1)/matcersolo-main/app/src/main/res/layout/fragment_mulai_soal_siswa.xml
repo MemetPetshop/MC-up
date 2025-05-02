@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/white">
+
+    <!-- Judul Soal -->
+    <TextView
+        android:id="@+id/teks_nomor_soal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:text="Soal 1/10"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/teks_nilai_sementara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/teks_nomor_soal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Nilai: 0"
+        android:textSize="16sp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Waktu -->
+    <TextView
+        android:id="@+id/teks_timer"
+        android:background="@drawable/bg_timer_siswa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="05:00"
+        android:textColor="@color/white"
+        android:padding="6dp"
+        android:gravity="center"
+        android:layout_gravity="center" />
+
+    <!-- Pertanyaan -->
+    <TextView
+        android:id="@+id/teks_pertanyaan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/teks_nilai_sementara"
+        android:gravity="center"
+        app:layout_goneMarginTop="30dp"
+        android:text="10 + 5 - 3 ="
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Opsi jawaban -->
+    <RadioGroup
+        android:id="@+id/opsi_jawaban"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/teks_pertanyaan"
+        android:layout_marginTop="50dp">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/jawaban_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A. 15"
+            android:background="@drawable/bg_opsi_siswa"
+            android:textColor="@color/black"
+            android:buttonTint="@color/black"/>
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/jawaban_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B. 5"
+            android:background="@drawable/bg_opsi_siswa"
+            android:textColor="@color/black"
+            android:buttonTint="@color/black"/>
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/jawaban_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C. 12"
+            android:buttonTint="@color/black"
+            android:background="@drawable/bg_opsi_siswa"
+            android:textColor="@color/black"/>
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/jawaban_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D. 20"
+            android:buttonTint="@color/black"
+
+            android:background="@drawable/bg_opsi_siswa"
+            android:textColor="@color/black"/>
+    </RadioGroup>
+
+    <!-- Tombol -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opsi_jawaban">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_kembali_soal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/regis_selector"
+            android:text="Kembali" />
+
+        <Space
+            android:layout_width="60dp"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_lanjut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_selector"
+            android:text="Lanjut" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

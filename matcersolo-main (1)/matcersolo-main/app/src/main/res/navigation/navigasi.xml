@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigasi"
+    app:startDestination="@id/berandaGuruFragment">
+
+    <!-- Fragment untuk Role Siswa -->
+    <fragment
+        android:id="@+id/berandaSiswaFragment"
+        android:name="com.example.matematika_cer.siswa.BerandaSiswaFragment"
+        android:label="Beranda Siswa">
+        <action
+            android:id="@+id/action_berandaSiswaFragment_to_detailTopikSiswaFragment"
+            app:destination="@id/detailTopikSiswaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailTopikSiswaFragment"
+        android:name="com.example.matematika_cer.guru.DetailTopikSiswaFragment"
+        android:label="Detail Topik">
+        <action
+            android:id="@+id/action_detailTopikSiswaFragment_to_soalSiswaFragment"
+            app:destination="@id/mulaiSoalSiswaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mulaiSoalSiswaFragment"
+        android:name="com.example.matematika_cer.siswa.MulaiSoalSiswaFragment"
+        android:label="Soal Siswa" />
+
+    <fragment
+        android:id="@+id/daftarsiswaFragment"
+        android:name="com.example.matematika_cer.guru.DaftarSiswa"
+        android:label="Daftar Siswa" />
+
+    <fragment
+        android:id="@+id/riwayatkuissiswaFragment"
+        android:name="com.example.matematika_cer.siswa.RiwayatKuisFragment"
+        android:label="Riwayat Kuis" />
+
+    <fragment
+        android:id="@+id/nilaisiswaFragment"
+        android:name="com.example.matematika_cer.siswa.NilaiSiswaFragment"
+        android:label="Nilai Siswa">
+        <action
+            android:id="@+id/action_nilaiSiswa_to_detailNilaiSiswa"
+            app:destination="@id/detailNilaiSiswaFragment" />
+    </fragment>
+
+    <!-- Fragment untuk Role Guru -->
+    <fragment
+        android:id="@+id/berandaGuruFragment"
+        android:name="com.example.matematika_cer.guru.BerandaGuruFragment"
+        android:label="Beranda Guru">
+        <action
+            android:id="@+id/action_beranda_to_daftarTopik"
+            app:destination="@id/daftarTopikFragment" />
+        <action
+            android:id="@+id/action_beranda_to_bankSoal"
+            app:destination="@id/bankSoalFragment" />
+        <action
+            android:id="@+id/action_beranda_to_tambahTopik"
+            app:destination="@id/tambahTopikSoalFragment" />
+        <action
+            android:id="@+id/action_beranda_to_editTopik"
+            app:destination="@id/editTopikSoalFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/daftarTopikFragment"
+        android:name="com.example.matematika_cer.guru.DaftarTopikFragment"
+        android:label="Daftar Topik" />
+
+    <fragment
+        android:id="@+id/bankSoalFragment"
+        android:name="com.example.matematika_cer.guru.BankSoalFragment"
+        android:label="Bank Soal" />
+
+    <fragment
+        android:id="@+id/tambahTopikSoalFragment"
+        android:name="com.example.matematika_cer.guru.BuatTopikdanSoalFragment"
+        android:label="Tambah Topik dan Soal" >
+        <action
+            android:id="@+id/action_tambahTopikSoalFragment_to_buatSoalFragment"
+            app:destination="@id/buatSoalFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editTopikSoalFragment"
+        android:name="com.example.matematika_cer.guru.EditTopikdanSoalFragment"
+        android:label="Edit Topik dan Soal" />
+
+    <fragment
+        android:id="@+id/buatSoalFragment"
+        android:name="com.example.matematika_cer.guru.BuatSoalFragment"
+        android:label="Buat Soal">
+
+        <action
+            android:id="@+id/action_buatSoalFragment_to_daftarTopikFragment"
+            app:destination="@id/daftarTopikFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailNilaiSiswaFragment"
+        android:name="com.example.matematika_cer.guru.DetailNilaiSiswaFragment"
+        android:label="Detail Nilai Siswa" />
+</navigation>

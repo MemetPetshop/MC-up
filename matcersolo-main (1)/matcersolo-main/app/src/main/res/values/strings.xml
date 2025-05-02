@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">matematika_cer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="roles">
+        <item>Guru</item>
+        <item>Siswa</item>
+    </string-array>
+
+    <string-array name="class_list">
+        <item>Kelas 1</item>
+        <item>Kelas 2</item>
+        <item>Kelas 3</item>
+        <item>Kelas 4</item>
+        <item>Kelas 5</item>
+        <item>Kelas 6</item>
+
+
+        <!-- ...dst... -->
+    </string-array>
+
+</resources>
+
